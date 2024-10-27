@@ -14,5 +14,5 @@ public class PatientDto {
     private String id;
     private String name;
     private String email;
-    private Long contactNo;
+    private String contactNo;
 }

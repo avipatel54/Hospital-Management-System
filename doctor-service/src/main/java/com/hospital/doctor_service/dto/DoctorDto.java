@@ -1,9 +1,10 @@
 package com.hospital.doctor_service.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.context.annotation.Primary;
+
+import javax.annotation.processing.Generated;
 
 @Data
 @Entity
