@@ -14,6 +14,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 
     @Override
     public void register(AppointmentDto appointmentDto) {
+        System.out.println("+++++++++++");
         appointmentRepository.save(appointmentDto);
     }
 }

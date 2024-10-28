@@ -1,5 +1,6 @@
 package com.hospital.appointment_service.controller;
 
+import com.hospital.appointment_service.dto.AppointmentDto;
 import com.hospital.appointment_service.dto.AuthenticationRequest;
 import com.hospital.appointment_service.serviceImpl.JwtAuthenticationService;
 import com.hospital.appointment_service.utils.JwtUtil;
@@ -24,10 +25,9 @@ public class AuthenticationController {
 
     @PostMapping("/login")
     public String authenticate(@RequestBody AuthenticationRequest loginUserDto) {
-        String token=jwtService.generateToken(loginUserDto.getUserName());
 
         String authenticatedUser = authenticationService.authenticate(loginUserDto.getUserName(),loginUserDto.getPassword());
-            System.out.println("ppp"+ token);
-            return authenticatedUser;
+
+        return authenticatedUser;
     }
 }

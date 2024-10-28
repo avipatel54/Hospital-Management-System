@@ -32,7 +32,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 
             @Override
             public String getPassword() {
-                return "test";
+                return "{noop}test";
             }
 
             @Override
